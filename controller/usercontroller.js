@@ -30,3 +30,11 @@ async function register(req, res) {
       email,
       password: hashedPassword
     });
+
+    return res.status(201).json({
+      message: "Registrasi berhasil.",
+      data: {
+        id: user.id,
+        email: user.email
+      }
+    });
