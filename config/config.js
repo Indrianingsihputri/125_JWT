@@ -8,3 +8,5 @@ const development = {
   port: process.env.BD_PORT,
   dialect: process.env.BD_DIALECT
 }
+
+module.exports = {development}
