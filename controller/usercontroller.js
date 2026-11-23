@@ -17,3 +17,9 @@ async function register(req, res) {
     const existingUser = await User.findOne({
       where: { email }
     });
+
+    if (existingUser) {
+      return res.status(409).json({
+        message: "Email sudah terdaftar."
+      });
+    }
