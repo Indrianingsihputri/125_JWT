@@ -23,3 +23,5 @@ async function register(req, res) {
         message: "Email sudah terdaftar."
       });
     }
+
+    const hashedPassword = await bcrypt.hash(password, 10);
